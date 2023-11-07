@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>update_info</title>
+    <style>
+        body{
+            background-color: #88e9e9;
+        }
+.update{
+    position:relative;
+    width:450px;
+    height:auto;
+    margin-top:8em;
+    padding: 1em;
+    left:35%;
+    background:#D6EEEE;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow:0 3px 20px 0px rgba(0, 0, 0, 0.1)
+}
+.update input{
+    position: relative;
+    width:75%;
+    font-size:1em;
+    padding:1.2em 1.7em 1.2em 1.7em;
+    margin-top:0.6em;
+    margin-left:1.5em;
+    margin-bottom:0.6em;
+    border-radius: 20px;
+    border:none;
+    background:#fff;
+    outline:none;
+    font-weight: bold;
+} 
+.update .btn{
+    width: 24.3em;
+    margin-top:0.5em;
+    padding:0.8em;
+    
+}
+.update .btn{
+    cursor: pointer;
+    position: relative;
+    text-transform: capitalize;
+    font-size:1em;
+    z-index: 2;
+    outline: none;
+    background-color:#e88e7e;
+    color: #fff;
+    transition:0.4s;
+}
+.update .btn:hover {
+    background:#222222b6;
+    color: #ebebeb;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="update">
+        <form action="/update_info" method="post">
+            <input type="text" value="{{result2[0]}}" name="name" placeholder="name">
+            <input type="text" value="{{result2[1]}}" name="email" placeholder="email">
+            <input type="text" value="{{result2[2]}}" name="phone" readonly>
+            <input type="text" value="{{result2[3]}}" name="password" placeholder="password">
+            <input type="submit" class="btn" value="Submit">
+        </form>
+    </div>
+    {{result3}}
+</body>
+</html>
